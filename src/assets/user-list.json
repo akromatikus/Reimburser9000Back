@@ -1,0 +1,13 @@
+[{
+    
+    "id":"123",
+    "username":"k",
+    "pw":"b",
+    "isManager": false,
+    "expenseHistory": [{
+        "amount":500,
+        "reason":"gas",
+        "isApproved": "y"
+    }]
+    
+}]
