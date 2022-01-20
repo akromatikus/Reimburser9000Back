@@ -1,0 +1,35 @@
+
+[
+    {
+        "id":"123",
+        "username":"k",
+        "pw":"b",
+        "isManager": false,
+        "expenseHistory": [
+            {
+            "name":"gas",
+            "amount":500,
+            "reason":"drove to big lots",
+            "isApproved": "y"
+            },
+            {
+                "name":"presents",
+                "amount":2000,
+                "reason": "asdfffffffffffffffffff ffffffffffffffffff fffasdfasdfasdfasd fffffffffffffffffff fffffffffffffffffffffasdf asdfasdfasdffffffffffffffffffffffffffffffffffffffffasd fasdfasdfasdffffffffffff fffffffffffffff fffffffffffffasdfasdfasdfasdfffffffffffffffff fffffffffffffffffffffffasdfasdfasdfasdffffffffffffffffffffffffffffffffffffffffasdfasdfasdf",
+                "isApproved": "y"
+            }
+        ]
+    }, 
+    {
+        "id":"456",
+        "username":"k",
+        "pw":"j",
+        "isManager": true,
+        "expenseHistory": [{
+            "name":"drugs",
+            "amount":100,
+            "reason":"I can't take any more JS",
+            "isApproved": "n"
+        }]
+    }
+]

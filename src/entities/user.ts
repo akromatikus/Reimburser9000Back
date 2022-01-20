@@ -4,5 +4,13 @@ export default interface user{
     username:string
     pw:string
     isManager:boolean
-    expenseHistory: object[]   
+    expenseHistory: expenseHistory[]
+   
+}
+
+export interface expenseHistory{
+    name:string
+    amount:number
+    reason:string
+    isApproved: string
 }

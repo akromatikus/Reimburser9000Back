@@ -1,13 +1,1 @@
-[{
-    
-    "id":"123",
-    "username":"k",
-    "pw":"b",
-    "isManager": false,
-    "expenseHistory": [{
-        "amount":500,
-        "reason":"gas",
-        "isApproved": "y"
-    }]
-    
-}]
+[{"id":"123","username":"k","pw":"b","isManager":false,"expenseHistory":[{"name":"","amount":0,"reason":"","isApproved":"y"},{"name":"","amount":0,"reason":"","isApproved":"y"},{"name":"","amount":0,"reason":"","isApproved":"y"},{"name":"","amount":0,"reason":"","isApproved":"y"},{"name":"","amount":0,"reason":"","isApproved":"n"},{"name":"","amount":0,"reason":"hmmm","isApproved":"y"}]},{"id":"456","username":"k","pw":"j","isManager":true,"expenseHistory":[{"name":"","amount":0,"reason":"","isApproved":"y"}]}]
