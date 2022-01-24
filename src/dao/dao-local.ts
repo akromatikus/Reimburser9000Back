@@ -11,7 +11,7 @@ export class userDaoConstruction implements userDao{
 
     //READ
     async readUsers(): Promise<user[]> {
-        const userListBinary: Buffer = await fs.readFile(`src\\assets\\user-list.json`)
+        const userListBinary: Buffer = await fs.readFile(`src/assets/user-list.json`)
         const userListText: string = await userListBinary.toString()
         const userListJSON: user[] = JSON.parse(userListText)
         
@@ -21,7 +21,7 @@ export class userDaoConstruction implements userDao{
 
     //UPDATE. updated list is a list of users with their expenseHistory updated on the front end
     async updateUsers(updatedList: user[]): Promise<void> {
-        await fs.writeFile(`src\\assets\\user-list.json`, JSON.stringify(updatedList));
+        await fs.writeFile(`src/assets/user-list.json`, JSON.stringify(updatedList));
     }
 
     
