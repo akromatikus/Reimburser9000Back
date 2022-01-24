@@ -1,53 +1,54 @@
-
 [
     {
-        "id":"123",
-        "username":"k",
-        "pw":"b",
+        "id": "123",
+        "username": "k",
+        "pw": "b",
         "isManager": false,
         "expenseHistory": [
             {
-            "name":"gas",
-            "amount":500,
-            "reason":"drove to big lots",
-            "isApproved": "Pending",
-            "comment":"''"
+                "name": "gas",
+                "amount": 500,
+                "reason": "drove to big lots",
+                "isApproved": "Yes",
+                "comment": "derpa"
             },
             {
-                "name":"presents",
-                "amount":2000,
+                "name": "presents",
+                "amount": 2000,
                 "reason": "asdfffffffffffffffffff ffffffffffffffffff fffasdfasdfasdfasd fffffffffffffffffff fffffffffffffffffffffasdf asdfasdfasdfffffffffff fffffffffffffffffffffffffffffasd fasdfasdfasdffffffffffff fffffffffffffff fffffffffffffasdfasdfasdfasdfffffffffffffffff fffffffffffffffffffffffasdfasdfasdf asdffffffffffffffffffffffffff ffffffffffffffasdfasdfasdf",
                 "isApproved": "Yes",
-                "comment":"''"
+                "comment": "comment2"
             }
         ]
-    }, 
-    {
-        "id":"456",
-        "username":"k",
-        "pw":"j",
-        "isManager": true,
-        "expenseHistory": [{
-            "name":"drugs",
-            "amount":100,
-            "reason":"I can't take any more JS",
-            "isApproved": "Pending",
-            "comment":"''"
-        }]
     },
     {
-        "id":"789",
-        "username":"b",
-        "pw":"b",
+        "id": "456",
+        "username": "k",
+        "pw": "j",
+        "isManager": true,
+        "expenseHistory": [
+            {
+                "name": "drugs",
+                "amount": 100,
+                "reason": "I can't take any more JS",
+                "isApproved": "Pending",
+                "comment": "yoyoyo"
+            }
+        ]
+    },
+    {
+        "id": "789",
+        "username": "b",
+        "pw": "b",
         "isManager": false,
-        "expenseHistory": [{
-            "name":"test5",
-            "amount":400,
-            "reason":"reason5",
-            "isApproved": "Pending",
-            "comment":"''"
-        }]
+        "expenseHistory": [
+            {
+                "name": "test5",
+                "amount": 400,
+                "reason": "reason5",
+                "isApproved": "Yes",
+                "comment": ""
+            }
+        ]
     }
-    
-
 ]
