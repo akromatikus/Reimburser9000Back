@@ -1,19 +1,19 @@
 import user from "../../entities/user"
 import { promises as fs } from 'fs';
-import { userDaoDatatypes } from "../dao-local";
+import { userDao } from "../dao-local";
 
 
-export interface userCheckDatatypes{
+export interface userCheckService{
     checkIfUser(username: string, pw: string): Promise<user>
 }
 
-export class userCheck implements userCheckDatatypes{
+export class userCheckServiceConstruction implements userCheckService{
 
     // make a new protected dao interface
-    private protectedContract: userDaoDatatypes  
+    private protectedContract: userDao  
 
     //object constructor, which passes in a dao interface
-    constructor(protectedContract: userDaoDatatypes){
+    constructor(protectedContract: userDao){
         this.protectedContract = protectedContract
     }
 
@@ -26,21 +26,21 @@ export class userCheck implements userCheckDatatypes{
         // const userListText: string = await userListBinary.toString()
         // const userListJSON: user[] = await JSON.parse(userListText)
 
-         console.log("The user List retrieved from the dao is: ")
-         console.log(userListJSON)
-         console.log('looking for matching username and pw... ')
+        //  console.log("The user List retrieved from the dao is: ")
+        //  console.log(userListJSON)
+        //  console.log('looking for matching username and pw... ')
 
-        const userIndex = userListJSON.find
+        const foundUser = userListJSON.find
             (
                 thisUsers => (thisUsers.username === username && thisUsers.pw === pw)
             )
 
-        if (!userIndex){throw new Error}
+        // console.log("checkIfUser returned: ", foundUser)
+        if (!foundUser){throw new Error("no user found")}
 
-        console.log("checkIfUser returned: ")
-        console.log(userIndex)
+        
 
         //return the user so the properties can be accessed by other services
-        return userIndex
+        return foundUser
     }
 }

@@ -4,8 +4,10 @@
   "description": "The Back End For Reimburser9000",
   "main": "index-backend.ts",
   "scripts": {
+    "test": "jest",
     "start": "ts-node src/index-backend.ts",
-    "test": "jest dao.spec.ts"
+    "test-dao": "jest ./specs/dao.spec.ts",
+    "test-services": "jest ./specs/services.spec.ts"
   },
   "repository": {
     "type": "git",

@@ -13,4 +13,5 @@ export interface expenseHistory{
     amount:number
     reason:string
     isApproved: string
+    comment: string
 }

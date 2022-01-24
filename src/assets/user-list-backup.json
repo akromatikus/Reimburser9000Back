@@ -10,13 +10,15 @@
             "name":"gas",
             "amount":500,
             "reason":"drove to big lots",
-            "isApproved": "y"
+            "isApproved": "Pending",
+            "comment":"''"
             },
             {
                 "name":"presents",
                 "amount":2000,
-                "reason": "asdfffffffffffffffffff ffffffffffffffffff fffasdfasdfasdfasd fffffffffffffffffff fffffffffffffffffffffasdf asdfasdfasdffffffffffffffffffffffffffffffffffffffffasd fasdfasdfasdffffffffffff fffffffffffffff fffffffffffffasdfasdfasdfasdfffffffffffffffff fffffffffffffffffffffffasdfasdfasdfasdffffffffffffffffffffffffffffffffffffffffasdfasdfasdf",
-                "isApproved": "y"
+                "reason": "asdfffffffffffffffffff ffffffffffffffffff fffasdfasdfasdfasd fffffffffffffffffff fffffffffffffffffffffasdf asdfasdfasdfffffffffff fffffffffffffffffffffffffffffasd fasdfasdfasdffffffffffff fffffffffffffff fffffffffffffasdfasdfasdfasdfffffffffffffffff fffffffffffffffffffffffasdfasdfasdf asdffffffffffffffffffffffffff ffffffffffffffasdfasdfasdf",
+                "isApproved": "Yes",
+                "comment":"''"
             }
         ]
     }, 
@@ -29,7 +31,23 @@
             "name":"drugs",
             "amount":100,
             "reason":"I can't take any more JS",
-            "isApproved": "n"
+            "isApproved": "Pending",
+            "comment":"''"
+        }]
+    },
+    {
+        "id":"789",
+        "username":"b",
+        "pw":"b",
+        "isManager": false,
+        "expenseHistory": [{
+            "name":"test5",
+            "amount":400,
+            "reason":"reason5",
+            "isApproved": "Pending",
+            "comment":"''"
         }]
     }
+    
+
 ]

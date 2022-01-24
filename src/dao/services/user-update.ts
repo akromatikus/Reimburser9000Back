@@ -1,9 +1,9 @@
 import user, { expenseHistory } from "../../entities/user"
 import { promises as fs } from 'fs';
-import { userDaoDatatypes } from "../dao-local";
+import { userDao } from "../dao-local";
 
 
-export interface userUpdateDatatypes{
+export interface userUpdateService{
 
     //update user based on their id, return true if the process completes successfully.
     updateUsers(userlist: user[]): Promise<boolean>
@@ -11,13 +11,13 @@ export interface userUpdateDatatypes{
     //updateUsers(updatedList: user[]): Promise<void>
 }
 
-export class userUpdate implements userUpdateDatatypes{
+export class userUpdateServiceConstruction implements userUpdateService{
 
     // make a new protected dao interface
-    private daoFunctions: userDaoDatatypes  
+    private daoFunctions: userDao  
 
     //object constructor, which passes in a dao interface
-    constructor(daoFunctions: userDaoDatatypes){
+    constructor(daoFunctions: userDao){
         this.daoFunctions = daoFunctions
     }
     
@@ -32,7 +32,7 @@ export class userUpdate implements userUpdateDatatypes{
             //get the database userlist
             const userListJSON: user[] = await this.daoFunctions.readUsers()
 
-            //creata a new array with the same size as the original
+            // console.log("The dao userlist to be updated is ", userListJSON)
             
             //for each user in the database
             const updatedList: user[] = userListJSON.map( (user: user)=> 
@@ -45,8 +45,12 @@ export class userUpdate implements userUpdateDatatypes{
                 }
             )            
 
+            // console.log("The updated list that the dao will update with is  ", updatedList)
+            // console.log("The first expense is now  ", updatedList[0].expenseHistory)
+            
             await this.daoFunctions.updateUsers(updatedList)
     
+            // console.log("will return true now")
             return true
         }
         catch{
@@ -54,25 +58,3 @@ export class userUpdate implements userUpdateDatatypes{
         }        
     }  
 }
-
-
-//updateUserlist
-// try{
-//     const userListJSON: user[] = await this.daoFunctions.readUsers()
-//     const updatedList: user[] = userListJSON.map( (user: user)=> 
-//         {
-//             if (user.id === id){
-//                 user.expenseHistory.length = 0
-//                 user.expenseHistory.push(...updatedExpenses)
-//             }
-//             return user
-//         }
-//     )            
-
-//     await this.daoFunctions.updateUsers(updatedList)
-    
-//     return true
-// }
-// catch{
-//     return false
-// }

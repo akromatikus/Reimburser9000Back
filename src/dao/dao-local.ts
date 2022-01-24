@@ -1,12 +1,12 @@
 import { promises as fs } from 'fs';
 import user, { expenseHistory } from "../entities/user"
 
-export interface userDaoDatatypes{
+export interface userDao{
     readUsers(): Promise<user[]>
     updateUsers(updatedList: user[]): Promise<void>
 }
 //updatedList: user[]
-export class userDao implements userDaoDatatypes{
+export class userDaoConstruction implements userDao{
     
 
     //READ

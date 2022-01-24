@@ -3,22 +3,22 @@
 import express from "express";
 import cors from 'cors'
 import user, { expenseHistory } from "./entities/user"
-import { userDaoDatatypes, userDao} from "./dao/dao-local"
-import { userCheckDatatypes, userCheck } from "./dao/services/check-if-user";
-import { userUpdate, userUpdateDatatypes } from "./dao/services/user-update";
-import { getAllUsersDatatypes, getAllUsersFunctions } from "./dao/services/get-all-users";
+import { userDao, userDaoConstruction} from "./dao/dao-local"
+import { userCheckService, userCheckServiceConstruction } from "./dao/services/check-if-user";
+import { userUpdateServiceConstruction, userUpdateService } from "./dao/services/user-update";
+import { getAllUsersService, getAllUsersServiceConstruction } from "./dao/services/get-all-users";
 
 const app = express();
 app.use(express.json());
 app.use(cors())
 
 //dao
-const thisUserDao: userDaoDatatypes = new userDao()
+const thisUserDao: userDao = new userDaoConstruction()
 
 //service
-const userCheckService: userCheckDatatypes = new userCheck(thisUserDao)
-const userUpdateService: userUpdateDatatypes = new userUpdate(thisUserDao)
-const getUserlistService: getAllUsersDatatypes = new getAllUsersFunctions(thisUserDao)
+const userCheckService: userCheckService = new userCheckServiceConstruction(thisUserDao)
+const userUpdateService: userUpdateService = new userUpdateServiceConstruction(thisUserDao)
+const getUserlistService: getAllUsersService = new getAllUsersServiceConstruction(thisUserDao)
 
 
 app.get("/", async (req,res) => {

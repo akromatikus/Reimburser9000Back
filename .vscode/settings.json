@@ -12,6 +12,7 @@
         "**/notes": false,
         "**/.vscode": false,
         "jest.config.js": false
-    }
+    },
+    "workbench.colorTheme": "Kimbie Dark"
     
 }
