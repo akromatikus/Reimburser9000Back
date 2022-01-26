@@ -1,6 +1,6 @@
 import user, { expenseHistory } from "../../entities/user"
 import { promises as fs } from 'fs';
-import { userDao } from "../dao-local";
+import { userDao } from "../dao-azure";
 
 
 export interface userUpdateService{

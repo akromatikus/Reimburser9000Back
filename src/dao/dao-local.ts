@@ -26,12 +26,3 @@ export class userDaoConstruction implements userDao{
 
     
 }
-
-
-
-// const userlistBinary: Buffer = await fs.readFile(`C:\\Users\\dasdu\\Documents\\Work\\Project\\Reimburser9000Back\\src\\assets\\user-list.json`)
-// const userListText: string = await userlistBinary.toString()
-// const userlist:user[] = JSON.parse(userListText);
-// const index = userlist.findIndex(user => user.id === requestedIDs[0])
-// userlist[index].expenseHistory.length=0
-// userlist[index].expenseHistory.push(...updatedExpenses)

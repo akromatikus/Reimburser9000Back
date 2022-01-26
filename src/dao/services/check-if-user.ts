@@ -1,6 +1,6 @@
 import user from "../../entities/user"
 import { promises as fs } from 'fs';
-import { userDao } from "../dao-local";
+import { userDao } from "../dao-azure";
 
 
 export interface userCheckService{
@@ -18,7 +18,7 @@ export class userCheckServiceConstruction implements userCheckService{
     }
 
     async checkIfUser(username: string, pw: string){
-        console.log("starting CheckIfUser: ")
+        // console.log("starting CheckIfUser: ")
         
         const userListJSON: user[] = await this.protectedContract.readUsers()
         
