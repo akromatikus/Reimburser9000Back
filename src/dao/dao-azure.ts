@@ -1,6 +1,5 @@
-import { promises as fs } from 'fs';
-import { CosmosClient } from "@azure/cosmos";
 
+import { CosmosClient } from "@azure/cosmos";
 import user, { expenseHistory } from "../entities/user";
 
 //Azure container
@@ -30,7 +29,8 @@ export class userDaoConstruction implements userDao{
 
     //UPDATE. updated list is a list of users with their expenseHistory updated on the front end
     async updateUsers(updatedList: user[]): Promise<void> {
-        const response = await container.items.upsert<user[]>(updatedList);
-        console.log(response)
+        for (let user of updatedList){
+            const response = await container.items.upsert<user>(user);
+        }
     }   
 }
