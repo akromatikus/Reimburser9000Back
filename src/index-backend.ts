@@ -117,4 +117,4 @@ app.patch("/update-users", async (req,res) => {
 
 })
 
-app.listen(5000,() => console.log("Application Started"));
+app.listen(process.env.PORT ?? 5000,() => console.log("Application Started"));

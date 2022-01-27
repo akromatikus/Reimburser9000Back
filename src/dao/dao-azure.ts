@@ -3,7 +3,7 @@ import { CosmosClient } from "@azure/cosmos";
 import user, { expenseHistory } from "../entities/user";
 
 //Azure container
-const client = new CosmosClient(process.env.AzureConnectionKey)
+const client = new CosmosClient(process.env.AzureDB)
 const database = client.database('reimbursement-management-website');
 const container = database.container('userlist');
 

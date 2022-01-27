@@ -2,17 +2,19 @@
     "scm.defaultViewMode": "tree",
     
     "files.exclude":{
-        "**/node_modules": false,
-        "**/assets": false,
-        ".gitignore": false,
-        "package.json": false,
-        "package-lock.json": false,
-        "README.md": false,
-        "tsconfig.json": false,
-        "**/notes": false,
-        "**/.vscode": false,
-        "jest.config.js": false
+        "**/node_modules": true,
+        "**/assets": true,
+        ".gitignore": true,
+        "package.json": true,
+        "package-lock.json": true,
+        "README.md": true,
+        "tsconfig.json": true,
+        "**/notes": true,
+        "**/.vscode": true,
+        "jest.config.js": true
     },
-    "workbench.colorTheme": "Kimbie Dark"
+    "workbench.colorTheme": "Kimbie Dark",
+    "appService.defaultWebAppToDeploy": "/subscriptions/aa855fb5-cde9-49a2-a096-f81e685a984d/resourceGroups/Reimburser9000/providers/Microsoft.Web/sites/reimburser9000-backend",
+    "appService.deploySubpath": "."
     
 }
