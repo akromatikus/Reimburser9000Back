@@ -2,52 +2,71 @@
 [
     {
         "id":"123",
-        "username":"k",
-        "pw":"b",
+        "username":"krees",
+        "pw":"boatmare",
         "isManager": false,
         "expenseHistory": [
             {
             "name":"gas",
             "amount":500,
-            "reason":"drove to big lots",
+            "reason":"drove to Home Depot for wood",
             "isApproved": "Pending",
-            "comment":"''"
+            "comment":""
             },
             {
                 "name":"presents",
                 "amount":2000,
-                "reason": "asdfffffffffffffffffff ffffffffffffffffff fffasdfasdfasdfasd fffffffffffffffffff fffffffffffffffffffffasdf asdfasdfasdfffffffffff fffffffffffffffffffffffffffffasd fasdfasdfasdffffffffffff fffffffffffffff fffffffffffffasdfasdfasdfasdfffffffffffffffff fffffffffffffffffffffffasdfasdfasdf asdffffffffffffffffffffffffff ffffffffffffffasdfasdfasdf",
+                "reason": "Christmas gifts for the corporate party raffle",
                 "isApproved": "Yes",
-                "comment":"''"
+                "comment":"Sounds great, just make sure you get one for me"
             }
         ]
     }, 
     {
         "id":"456",
-        "username":"k",
-        "pw":"j",
+        "username":"Freddie Spaghetti",
+        "pw":"Spaghetti",
         "isManager": true,
         "expenseHistory": [{
-            "name":"drugs",
-            "amount":100,
-            "reason":"I can't take any more JS",
+            "name":"machine accident",
+            "amount":10000,
+            "reason":"Meat grinder turned my hands into spaghetti",
+            "isApproved": "No",
+            "comment":"Shoulda stuck to singing for kids"
+        }]
+    },
+    {
+        "id":"789",
+        "username":"dude",
+        "pw":"bro",
+        "isManager": false,
+        "expenseHistory": [{
+            "name":"carpool",
+            "amount":400,
+            "reason":"bosses's car broke down, had to drive extra",
             "isApproved": "Pending",
             "comment":"''"
         }]
     },
     {
-        "id":"789",
-        "username":"b",
-        "pw":"b",
-        "isManager": false,
+        "id":"101112",
+        "username":"Mr manager",
+        "pw":"Manage",
+        "isManager": true,
+        "expenseHistory": []
+    },
+    {
+        "id":"131415",
+        "username":"Jeff Bezos",
+        "pw":"hahaha",
+        "isManager": true,
         "expenseHistory": [{
-            "name":"test5",
-            "amount":400,
-            "reason":"reason5",
+            "name":"party",
+            "amount":400000,
+            "reason":"Say no and see what happens",
             "isApproved": "Pending",
-            "comment":"''"
+            "comment":""
         }]
     }
-    
 
 ]

@@ -21,14 +21,6 @@ export class userCheckServiceConstruction implements userCheckService{
         // console.log("starting CheckIfUser: ")
         
         const userListJSON: user[] = await this.protectedContract.readUsers()
-        
-        // const userListBinary: Buffer = await fs.readFile(`C:\\Users\\dasdu\\Documents\\Work\\Project\\reimburser9000\\src\\backend\\assets\\user-list.json`)
-        // const userListText: string = await userListBinary.toString()
-        // const userListJSON: user[] = await JSON.parse(userListText)
-
-        //  console.log("The user List retrieved from the dao is: ")
-        //  console.log(userListJSON)
-        //  console.log('looking for matching username and pw... ')
 
         const foundUser = userListJSON.find
             (
@@ -38,8 +30,7 @@ export class userCheckServiceConstruction implements userCheckService{
         // console.log("checkIfUser returned: ", foundUser)
         if (!foundUser){throw new Error("no user found")}
 
-        
-
+    
         //return the user so the properties can be accessed by other services
         return foundUser
     }

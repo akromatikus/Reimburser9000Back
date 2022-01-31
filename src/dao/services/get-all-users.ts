@@ -21,10 +21,6 @@ export class getAllUsersServiceConstruction implements getAllUsersService{
         
         const userListJSON: user[] = await this.protectedContract.readUsers()
 
-        //  console.log("The user List retrieved from the dao is: ")
-        //  console.log(userListJSON)
-        //  console.log('looking for matching username and pw... ')
-
         //return the user so the properties can be accessed by other services
         return userListJSON
     }

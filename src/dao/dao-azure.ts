@@ -19,12 +19,6 @@ export class userDaoConstruction implements userDao{
         //const userListBinary: Buffer = await fs.readFile(`src/assets/user-list.json`)
         const response = await container.items.readAll<user>().fetchAll();
         return response.resources
-        
-        //const userListText: string = await userListBinary.toString()
-        //const userListJSON: user[] = JSON.parse(userListText)
-        
-        //return userListJSON
-
     }
 
     //UPDATE. updated list is a list of users with their expenseHistory updated on the front end

@@ -44,9 +44,6 @@ export class userUpdateServiceConstruction implements userUpdateService{
                     else {return user} //otherwise return the unchanged database user       
                 }
             )            
-
-            // console.log("The updated list that the dao will update with is  ", updatedList)
-            // console.log("The first expense is now  ", updatedList[0].expenseHistory)
             
             await this.daoFunctions.updateUsers(updatedList)
     
